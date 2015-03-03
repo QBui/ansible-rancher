@@ -1,0 +1,15 @@
+[default]
+localhost ansible_python_interpreter=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+
+[master]
+
+[workers]
+
+[nodes:children]
+master
+workers
+
+[nodes:vars]
+ansible_ssh_user=rancher
+ansible_ssh_private_key_file=~/.ssh/id_rsa_rancher
+ansible_python_interpreter="PATH=/home/core/bin:$PATH python"

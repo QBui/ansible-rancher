@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    ssh_key: rancher
+    aws_region: us-east-1
+    num_nodes: 1
+    security_group_name: rancher
+    template: ami-eeaefc86 
+    instance_type: m1.small
+
+  roles:
+    - common
+    - rancher
